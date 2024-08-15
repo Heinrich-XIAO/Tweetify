@@ -9,6 +9,7 @@ To set up tweetify on your local machine, you need to first get python and pip o
 On most GNU+Linux distros python is presintalled. If not then you can do this:
 ```
 Arch-based: pacman -S python3 python3-pip
+Fedora-based: dnf install python3 python3-pip
 Debian-based: apt install python3 python3-pip
 Void: xbps-install python3 python3-pip (i think)
 Gentoo: emerge python3 python3-pip (i think this is how you install on gentoo, but if you don't have python then your package manager won't work anyway lmao)
