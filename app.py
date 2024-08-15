@@ -153,7 +153,9 @@ def community(comid):
     cursor = conn.cursor()
 
     cursor.execute("select name from communities where id=?", (comid,))
-    name = cursor.fetchone()[0]
+    names = cursor.fetchone()
+    if names: return "Community does not exist"
+    name = names[0]
     cursor.execute("select desc from communities where id=?", (comid,))
     desc = cursor.fetchone()[0]
     cursor.execute("select username, message, imageurl from messages where communityid=? order by messageid desc", (comid,))
